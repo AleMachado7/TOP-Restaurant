@@ -28,14 +28,21 @@ function loadHome() {
   homeSection.appendChild(homeLogo);
 
   //add description
-  const homeDescription = createHTMLElement("p", "home-description");
-  homeDescription.textContent = `Welcome to Ciao Bella, where authentic Italian cuisine meets warm and sophisticated hospitality. Our
+  const homeDescription = createHTMLElement("div", "home-description");
+  const restaurantDescription = createHTMLElement(
+    "p",
+    "restaurant-description"
+  );
+  restaurantDescription.textContent = `Welcome to Ciao Bella, where authentic Italian cuisine meets warm and sophisticated hospitality. Our
                     menu features delicious dishes, from fresh salads to homemade pastas, crispy pizzas, and grilled
-                    meats. Don't forget to try our artisanal desserts and carefully selected Italian wines. Join us for
-                    a romantic dinner for two, a gathering with friends, or a special celebration. Let our attentive
+                    meats. Don't forget to try our artisanal desserts and carefully selected Italian wines. `;
+  const restaurantInvite = createHTMLElement("p", "restaurant-invite");
+  restaurantInvite.textContent = `Join us for a romantic dinner for two, a gathering with friends, or a special celebration. Let our attentive
                     staff take care of everything for you. Ciao Bella, where the food is always delicious and the
                     hospitality is unmatched.`;
-  homeSection.appendChild(homeDescription);
+  homeDescription.append(restaurantDescription, restaurantInvite);
+
+  homeSection.append(homeDescription);
 
   return homeSection;
 }
