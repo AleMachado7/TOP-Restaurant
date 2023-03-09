@@ -1,6 +1,6 @@
-function createHTMLElement(elementTag, elementId, elementText) {
+function createHTMLElement(elementTag, elementClass, elementText) {
   const newElement = document.createElement(elementTag);
-  newElement.setAttribute("id", elementId);
+  newElement.setAttribute("class", elementClass);
   newElement.textContent = elementText;
 
   return newElement;
