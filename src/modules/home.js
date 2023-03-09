@@ -1,50 +1,74 @@
 import createHTMLElement from "../../functions/create-html-element";
+import loadHeader from "./header";
 
 function loadHome() {
-  const homeSection = createHTMLElement("section", "home-content");
-
-  // create header
-  const header = createHTMLElement("header", "header");
-  const contentItems = createHTMLElement("ul", "content-items");
-  const homeContent = createHTMLElement("li", "header-home", "Home");
-  const menuContent = createHTMLElement("li", "header-menu", "Menu");
-  const contactContent = createHTMLElement("li", "header-contact", "Contact");
-
-  contentItems.append(homeContent, menuContent, contactContent);
-  header.appendChild(contentItems);
-  homeSection.appendChild(header);
+  const home = createHTMLElement("section", "content");
+  home.appendChild(loadHeader());
 
   // add title
-  const homeTitle = createHTMLElement(
-    "h1",
-    "home-title",
-    "Ciao Bella Restaurant"
-  );
-  homeSection.appendChild(homeTitle);
+  const homeTitle = createHTMLElement("h1", "title", "Ciao Bella Restaurant");
+  home.appendChild(homeTitle);
 
   // add logo
-  const homeLogo = createHTMLElement("img", "home-logo");
+  const homeLogo = createHTMLElement("img", "logo");
   homeLogo.setAttribute("src", "../src/assets/logo.webp");
-  homeSection.appendChild(homeLogo);
+  home.appendChild(homeLogo);
 
   //add description
-  const homeDescription = createHTMLElement("div", "home-description");
-  const restaurantDescription = createHTMLElement(
-    "p",
-    "restaurant-description"
+  const homeText = createHTMLElement("div", "text-container");
+  const homeSubtext = createHTMLElement("div", "text-container");
+
+  homeText.appendChild(
+    createHTMLElement(
+      "p",
+      "large-text",
+      "Welcome to Ciao Bella, where authentic Italian cuisine meets warm and sophisticated hospitality."
+    )
   );
-  restaurantDescription.textContent = `Welcome to Ciao Bella, where authentic Italian cuisine meets warm and sophisticated hospitality. Our
-                    menu features delicious dishes, from fresh salads to homemade pastas, crispy pizzas, and grilled
-                    meats. Don't forget to try our artisanal desserts and carefully selected Italian wines. `;
-  const restaurantInvite = createHTMLElement("p", "restaurant-invite");
-  restaurantInvite.textContent = `Join us for a romantic dinner for two, a gathering with friends, or a special celebration. Let our attentive
-                    staff take care of everything for you. Ciao Bella, where the food is always delicious and the
-                    hospitality is unmatched.`;
-  homeDescription.append(restaurantDescription, restaurantInvite);
+  homeText.appendChild(
+    createHTMLElement(
+      "p",
+      "large-text",
+      "Our menu features delicious dishes, from fresh salads to homemade pastas, crispy pizzas, and grilled meats."
+    )
+  );
+  homeText.appendChild(
+    createHTMLElement(
+      "p",
+      "large-text",
+      "Don't forget to try our artisanal desserts and carefully selected Italian wines."
+    )
+  );
 
-  homeSection.append(homeDescription);
+  home.appendChild(homeText);
 
-  return homeSection;
+  homeSubtext.appendChild(
+    createHTMLElement(
+      "p",
+      "large-text",
+      "Join us for a romantic dinner for two, a gathering with friends, or a special celebration."
+    )
+  );
+
+  homeSubtext.appendChild(
+    createHTMLElement(
+      "p",
+      "large-text",
+      "Let our attentive staff take care of everything for you"
+    )
+  );
+
+  homeSubtext.appendChild(
+    createHTMLElement(
+      "p",
+      "large-text",
+      "Ciao Bella, where the food is always delicious and the hospitality is unmatched."
+    )
+  );
+
+  home.appendChild(homeSubtext);
+
+  return home;
 }
 
 export default loadHome;
