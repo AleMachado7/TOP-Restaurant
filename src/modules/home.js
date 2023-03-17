@@ -1,9 +1,8 @@
 import createHTMLElement from "../../functions/create-html-element";
-import loadHeader from "./header";
 
 function loadHome() {
-  const home = createHTMLElement("section", "content");
-  home.appendChild(loadHeader());
+  const home = createHTMLElement("section", "home");
+  home.classList.add("active"); // default home as active tab
 
   // add title
   const homeTitle = createHTMLElement("h1", "title", "Ciao Bella Restaurant");
@@ -15,8 +14,8 @@ function loadHome() {
   home.appendChild(homeLogo);
 
   //add description
-  const homeText = createHTMLElement("div", "text-container");
-  const homeSubtext = createHTMLElement("div", "text-container");
+  const homeText = createHTMLElement("div", "large-container");
+  const homeSubtext = createHTMLElement("div", "large-container");
 
   homeText.appendChild(
     createHTMLElement(
