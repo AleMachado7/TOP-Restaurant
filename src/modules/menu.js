@@ -16,7 +16,7 @@ function loadMenu() {
   entryFood.appendChild(
     createHTMLElement(
       "p",
-      "large-text",
+      "food-description",
       "A classic Italian appetizer consisting of grilled bread rubbed with garlic and topped with fresh tomatoes, basil, and olive oil."
     )
   );
@@ -34,7 +34,7 @@ function loadMenu() {
   mainFood.appendChild(
     createHTMLElement(
       "p",
-      "large-text",
+      "food-description",
       "This creamy rice dish is made with saffron, butter, onion, Parmesan cheese, and white wine. It is a classic Milanese recipe and is often served with Osso Buco."
     )
   );
@@ -50,7 +50,7 @@ function loadMenu() {
   dessert.appendChild(
     createHTMLElement(
       "p",
-      "large-text",
+      "food-description",
       "A popular Italian dessert made with layers of ladyfingers soaked in espresso and coffee liqueur, mascarpone cheese, and cocoa powder. It is a rich and indulgent treat that is perfect for satisfying your sweet tooth."
     )
   );
