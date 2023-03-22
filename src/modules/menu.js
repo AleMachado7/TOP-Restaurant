@@ -3,12 +3,15 @@ import createHTMLElement from "../../functions/create-html-element";
 function loadMenu() {
   const menu = createHTMLElement("section", "menu");
 
-  // add title
+  //*  add title
   const menuTitle = createHTMLElement("h1", "title", "Restaurant Menu");
   menu.appendChild(menuTitle);
 
+  // add div container for the foods of menu
+  const foodGrid = createHTMLElement("div", "food-grid");
+
   // add entry food to the menu
-  const entryFood = createHTMLElement("div", "large-container");
+  const entryFood = createHTMLElement("div", "food-item");
   entryFood.appendChild(createHTMLElement("h2", "subtitle", "Bruschetta"));
   const entryImg = createHTMLElement("img", "food-image");
   entryImg.setAttribute("src", "../src/assets/bruschetta.png");
@@ -21,10 +24,10 @@ function loadMenu() {
     )
   );
   entryFood.appendChild(createHTMLElement("p", "food-price", "Price: $4.50"));
-  menu.appendChild(entryFood);
+  foodGrid.appendChild(entryFood);
 
   // add main course to the menu
-  const mainFood = createHTMLElement("div", "large-container");
+  const mainFood = createHTMLElement("div", "food-item");
   mainFood.appendChild(
     createHTMLElement("h2", "subtitle", "Risotto alla Milanese")
   );
@@ -39,10 +42,10 @@ function loadMenu() {
     )
   );
   mainFood.appendChild(createHTMLElement("p", "food-price", "Price: $15.00"));
-  menu.appendChild(mainFood);
+  foodGrid.appendChild(mainFood);
 
   // add dessert  to the menu
-  const dessert = createHTMLElement("div", "large-container");
+  const dessert = createHTMLElement("div", "food-item");
   dessert.appendChild(createHTMLElement("h2", "subtitle", "Tiramisu"));
   const dessertImg = createHTMLElement("img", "food-image");
   dessertImg.setAttribute("src", "../src/assets/tiramisu.png");
@@ -55,7 +58,9 @@ function loadMenu() {
     )
   );
   dessert.appendChild(createHTMLElement("p", "food-price", "Price: $8.00"));
-  menu.appendChild(dessert);
+  foodGrid.appendChild(dessert);
+
+  menu.appendChild(foodGrid);
 
   return menu;
 }

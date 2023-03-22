@@ -10,7 +10,7 @@ function loadContact() {
   // add contact details
   const contactDetails = createHTMLElement("div", "large-container");
   contactDetails.appendChild(
-    createHTMLElement("p", "subtitle", "Reach us ou!")
+    createHTMLElement("p", "subtitle", "Reach us out!")
   );
   contactDetails.appendChild(
     createHTMLElement("p", "large-text", "Telephone: +55 31 9999999999")
