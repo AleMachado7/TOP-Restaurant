@@ -10,7 +10,7 @@ function loadHome() {
 
   // add logo
   const homeLogo = createHTMLElement("img", "logo");
-  homeLogo.setAttribute("src", "../src/assets/logo.webp");
+  homeLogo.setAttribute("src", "../src/assets/logo.png");
   home.appendChild(homeLogo);
 
   //add description
