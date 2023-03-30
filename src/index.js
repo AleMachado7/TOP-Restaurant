@@ -1,4 +1,10 @@
 import pageLoad from "./modules/page-load";
+import "./style.css";
+import "./assets/background.png";
+import "./assets/bruschetta.png";
+import "./assets/logo.png";
+import "./assets/risoto_milanes_com_ossobuco.png";
+import "./assets/tiramisu.png";
 
 pageLoad();
 
