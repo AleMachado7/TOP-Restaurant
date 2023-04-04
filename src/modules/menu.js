@@ -14,7 +14,7 @@ function loadMenu() {
   const entryFood = createHTMLElement("div", "food-item");
   entryFood.appendChild(createHTMLElement("h2", "subtitle", "Bruschetta"));
   const entryImg = createHTMLElement("img", "food-image");
-  entryImg.setAttribute("src", "../src/assets/bruschetta.png");
+  entryImg.setAttribute("src", "./assets/images/bruschetta.png");
   entryFood.appendChild(entryImg);
   entryFood.appendChild(
     createHTMLElement(
@@ -32,7 +32,10 @@ function loadMenu() {
     createHTMLElement("h2", "subtitle", "Risotto alla Milanese")
   );
   const mainImg = createHTMLElement("img", "food-image");
-  mainImg.setAttribute("src", "../src/assets/risoto_milanes_com_ossobuco.png");
+  mainImg.setAttribute(
+    "src",
+    "./assets/images/risoto_milanes_com_ossobuco.png"
+  );
   mainFood.appendChild(mainImg);
   mainFood.appendChild(
     createHTMLElement(
@@ -48,7 +51,7 @@ function loadMenu() {
   const dessert = createHTMLElement("div", "food-item");
   dessert.appendChild(createHTMLElement("h2", "subtitle", "Tiramisu"));
   const dessertImg = createHTMLElement("img", "food-image");
-  dessertImg.setAttribute("src", "../src/assets/tiramisu.png");
+  dessertImg.setAttribute("src", "./assets/images/tiramisu.png");
   dessert.appendChild(dessertImg);
   dessert.appendChild(
     createHTMLElement(
